@@ -1,0 +1,141 @@
+@import 'tailwindcss';
+
+/* Color scheme for HODA SHINE SERVICES */
+:root {
+  --background: #f6f8fb;
+  --foreground: #0e1726;
+  --primary: #0f6b63;
+  --primary-light: #1a8a7e;
+  --accent: #f2b33d;
+  --accent-dark: #e0a02d;
+  --text-dark: #0e1726;
+  --text-light: #6b7280;
+  --border-color: #e5e7eb;
+}
+
+@theme inline {
+  --font-sans: 'Inter', 'Inter Fallback', sans-serif;
+  --font-heading: 'Poppins', 'Poppins Fallback', sans-serif;
+}
+
+@layer base {
+  * {
+    border-color: var(--border-color);
+  }
+  
+  body {
+    background-color: var(--background);
+    color: var(--text-dark);
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105;
+    background-color: var(--primary);
+    color: white;
+  }
+
+  .btn-primary:hover {
+    background-color: var(--primary-light);
+  }
+
+  .btn-secondary {
+    @apply px-6 py-3 rounded-lg font-semibold transition-all duration-300 border-2;
+    border-color: var(--primary);
+    color: var(--primary);
+  }
+
+  .btn-secondary:hover {
+    background-color: var(--primary);
+    color: white;
+  }
+
+  .btn-accent {
+    @apply px-6 py-3 rounded-lg font-semibold transition-all duration-300;
+    background-color: var(--accent);
+    color: var(--text-dark);
+  }
+
+  .btn-accent:hover {
+    background-color: var(--accent-dark);
+  }
+
+  .section-title {
+    @apply text-4xl md:text-5xl font-bold mb-4;
+    color: var(--text-dark);
+  }
+
+  .section-subtitle {
+    @apply text-lg md:text-xl mb-12;
+    color: var(--text-light);
+  }
+
+  .fade-up {
+    animation: fadeUp 0.6s ease-out forwards;
+  }
+
+  .slide-in-left {
+    animation: slideInLeft 0.6s ease-out forwards;
+  }
+
+  .slide-in-right {
+    animation: slideInRight 0.6s ease-out forwards;
+  }
+
+  .glass-navbar {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(15, 107, 99, 0.1);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
