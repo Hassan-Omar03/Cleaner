@@ -39,7 +39,7 @@ export default function ContactPage() {
     <main className="min-h-screen bg-white">
       <Header />
 
-      <section className="py-20 px-6 md:px-12 bg-gradient-to-r from-teal-800 to-teal-900 text-white">
+      <section className="py-20 px-6 md:px-12 bg-[#195a88] text-white">
         <div className="max-w-7xl mx-auto">
           <h1 className="text-5xl md:text-6xl font-black mb-4">Get In Touch</h1>
           <p className="text-xl text-teal-100 max-w-3xl">We're here to help. Contact us for a free quote or any questions you may have.</p>
@@ -53,10 +53,10 @@ export default function ContactPage() {
               const Icon = info.icon
               return (
                 <div key={i} className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100">
-                  <Icon className="text-teal-800 mb-4" size={32} />
+                  <Icon className="text-[#195a88] mb-4" size={32} />
                   <h3 className="text-lg font-bold text-gray-900 mb-2">{info.title}</h3>
                   {info.link ? (
-                    <a href={info.link} className="text-teal-700 font-semibold hover:text-teal-900 transition-colors duration-300">
+                    <a href={info.link} className="text-[#195a88] transition-colors duration-300">
                       {info.details}
                     </a>
                   ) : (
@@ -79,7 +79,7 @@ export default function ContactPage() {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-teal-800 focus:outline-none focus:ring-2 focus:ring-teal-100 transition-all duration-300"
+                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#195a88] focus:outline-none focus:ring-2 focus:ring-teal-100 transition-all duration-300"
                 />
                 <input
                   type="email"
@@ -88,7 +88,7 @@ export default function ContactPage() {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-teal-800 focus:outline-none focus:ring-2 focus:ring-teal-100 transition-all duration-300"
+                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#195a88] focus:outline-none focus:ring-2 focus:ring-teal-100 transition-all duration-300"
                 />
                 <input
                   type="tel"
@@ -96,13 +96,13 @@ export default function ContactPage() {
                   placeholder="Phone Number"
                   value={formData.phone}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-teal-800 focus:outline-none focus:ring-2 focus:ring-teal-100 transition-all duration-300"
+                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#195a88] focus:outline-none focus:ring-2 focus:ring-teal-100 transition-all duration-300"
                 />
                 <select
                   name="service"
                   value={formData.service}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-teal-800 focus:outline-none focus:ring-2 focus:ring-teal-100 transition-all duration-300"
+                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#195a88] focus:outline-none focus:ring-2 focus:ring-teal-100 transition-all duration-300"
                 >
                   <option value="">Select a Service</option>
                   <option value="residential">Residential Cleaning</option>
@@ -118,7 +118,7 @@ export default function ContactPage() {
                   name="date"
                   value={formData.date}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-teal-800 focus:outline-none focus:ring-2 focus:ring-teal-100 transition-all duration-300"
+                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#195a88] focus:outline-none focus:ring-2 focus:ring-teal-100 transition-all duration-300"
                 />
                 <textarea
                   name="message"
@@ -126,11 +126,11 @@ export default function ContactPage() {
                   value={formData.message}
                   onChange={handleChange}
                   rows={4}
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-teal-800 focus:outline-none focus:ring-2 focus:ring-teal-100 transition-all duration-300 resize-none"
+                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#195a88] focus:outline-none focus:ring-2 focus:ring-teal-100 transition-all duration-300 resize-none"
                 ></textarea>
                 <button
                   type="submit"
-                  className="w-full bg-gradient-to-r from-teal-700 to-teal-800 text-white py-3 rounded-lg font-bold flex items-center justify-center gap-2 hover:shadow-lg transition-all duration-300 transform hover:scale-105"
+                  className="w-full bg-[#195a88] text-white py-3 rounded-lg font-bold flex items-center justify-center gap-2 hover:shadow-lg transition-all duration-300 transform hover:scale-105"
                 >
                   <Send size={18} />
                   Send Message

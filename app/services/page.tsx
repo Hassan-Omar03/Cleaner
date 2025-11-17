@@ -77,7 +77,7 @@ export default function ServicesPage() {
     <main className="min-h-screen bg-white">
       <Header />
 
-      <section className="py-20 px-6 md:px-12 bg-gradient-to-r from-teal-800 to-teal-900 text-white">
+      <section className="py-20 px-6 md:px-12 bg-[#195a88] text-white">
         <div className="max-w-7xl mx-auto">
           <h1 className="text-5xl md:text-6xl font-black mb-4">Our Services</h1>
           <p className="text-xl text-teal-100 max-w-3xl">Comprehensive cleaning solutions tailored to your specific needs and budget</p>
@@ -115,7 +115,7 @@ export default function ServicesPage() {
                     ))}
                   </ul>
 
-                  <Link href="/contact" className="inline-flex items-center gap-2 text-teal-700 font-bold hover:text-teal-900 transition-colors duration-300 pt-2 w-fit">
+                  <Link href="/contact" className="inline-flex items-center gap-2 text-[#195a88] transition-colors duration-300 pt-2 w-fit">
                     Get Quote
                     <ArrowRight size={18} />
                   </Link>
