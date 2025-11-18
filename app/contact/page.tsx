@@ -2,7 +2,7 @@
 
 import Header from '@/components/header'
 import Footer from '@/components/footer'
-import { Phone, Mail, MapPin, Clock, Send } from 'lucide-react'
+import { Phone, Mail, MapPin, Clock, Send, MessageCircle } from 'lucide-react'
 import { useState } from 'react'
 
 export default function ContactPage() {
@@ -16,62 +16,131 @@ export default function ContactPage() {
   })
   const [submitted, setSubmitted] = useState(false)
 
+  // Handle form input
   const handleChange = (e: any) => {
     setFormData({ ...formData, [e.target.name]: e.target.value })
   }
 
-  const handleSubmit = (e: any) => {
-    e.preventDefault()
-    console.log('Form submitted:', formData)
-    setSubmitted(true)
-    setTimeout(() => setSubmitted(false), 3000)
-    setFormData({ name: '', email: '', phone: '', service: '', date: '', message: '' })
+  // WhatsApp Submit Function
+  const handleWhatsAppSubmit = () => {
+    const phoneNumber = "971522032532"; // WhatsApp receiver
+
+    const message = `📥 *New Contact Form Submission*
+
+👤 *Name:* ${formData.name}
+📧 *Email:* ${formData.email}
+📞 *Phone:* ${formData.phone}
+🧹 *Service:* ${formData.service}
+📅 *Preferred Date:* ${formData.date}
+
+📝 *Message:*
+${formData.message}
+`;
+
+    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`
+    window.open(url, "_blank")
   }
 
-  const contactInfo = [
-    { icon: Phone, title: 'Phone', details: ' +971 0569407167 / +971 0522032532', link: '+971 0569407167 / +971 0522032532' },
-    { icon: Mail, title: 'Email', details: 'hodashineservices@gmail.com', link: 'hodashineservices@gmail.com' },
-    { icon: MapPin, title: 'Location', details: 'Free Zone Ajman, Block C1, UAE' },
-    { icon: Clock, title: 'Hours', details: 'Mon-Sun: 8:00 AM - 8:00 PM' }
-  ]
+  // Handle form submit
+  const handleSubmit = (e: any) => {
+    e.preventDefault()
+    handleWhatsAppSubmit()
+    setSubmitted(true)
+
+    setTimeout(() => setSubmitted(false), 3000)
+
+    setFormData({
+      name: '',
+      email: '',
+      phone: '',
+      service: '',
+      date: '',
+      message: ''
+    })
+  }
 
   return (
     <main className="min-h-screen bg-white">
       <Header />
 
-      <section className="py-20 px-6 md:px-12 bg-[#195a88] text-white">
+      {/* HERO */}
+      <section className="py-20 px-6 md:px-12 bg-[#00FFFF] text-white">
         <div className="max-w-7xl mx-auto">
           <h1 className="text-5xl md:text-6xl font-black mb-4">Get In Touch</h1>
-          <p className="text-xl text-teal-100 max-w-3xl">We're here to help. Contact us for a free quote or any questions you may have.</p>
+          <p className="text-xl text-black max-w-3xl">
+            We're here to help. Contact us for a free quote or any questions you may have.
+          </p>
         </div>
       </section>
 
+      {/* CONTACT BLOCKS */}
       <section className="py-20 px-6 md:px-12 bg-gray-50">
         <div className="max-w-7xl mx-auto">
+
+          {/* CONTACT INFO CARDS */}
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
-            {contactInfo.map((info, i) => {
-              const Icon = info.icon
-              return (
-                <div key={i} className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100">
-                  <Icon className="text-[#195a88] mb-4" size={32} />
-                  <h3 className="text-lg font-bold text-gray-900 mb-2">{info.title}</h3>
-                  {info.link ? (
-                    <a href={info.link} className="text-[#195a88] transition-colors duration-300">
-                      {info.details}
-                    </a>
-                  ) : (
-                    <p className="text-gray-700">{info.details}</p>
-                  )}
-                </div>
-              )
-            })}
+
+            {/* CALL */}
+            <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100">
+              <Phone className="text-[#00FFFF] mb-4" size={32} />
+              <h3 className="text-lg font-bold text-gray-900 mb-2">Call</h3>
+
+              <a 
+                href="tel:+971569407167"
+                className="text-black font-medium block hover:text-[#195a88] transition"
+              >
+                +971 056 940 7167
+              </a>
+            </div>
+
+            {/* WHATSAPP */}
+            <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100">
+              <MessageCircle className="text-[#00FFFF] mb-4" size={32} />
+              <h3 className="text-lg font-bold text-gray-900 mb-2">WhatsApp</h3>
+
+              <a
+                href="https://wa.me/971522032532"
+                target="_blank"
+                className="text-black font-medium block hover:text-green-600 transition"
+              >
+                +971 52 203 2532
+              </a>
+            </div>
+
+            {/* EMAIL */}
+            <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100">
+              <Mail className="text-[#00FFFF] mb-4" size={32} />
+              <h3 className="text-lg font-bold text-gray-900 mb-2">Email</h3>
+
+              <a 
+                href="mailto:hodashineservices@gmail.com"
+                className="text-black"
+              >
+                hodashineservices@gmail.com
+              </a>
+            </div>
+
+            {/* LOCATION */}
+            <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100">
+              <MapPin className="text-[#00FFFF] mb-4" size={32} />
+              <h3 className="text-lg font-bold text-gray-900 mb-2">Location</h3>
+
+              <p className="text-black">
+                Free Zone Ajman, Block C1, UAE
+              </p>
+            </div>
+
           </div>
 
+          {/* FORM + SIDEBAR */}
           <div className="grid md:grid-cols-2 gap-12">
-            {/* Form */}
+
+            {/* FORM */}
             <div className="bg-white rounded-2xl p-8 shadow-lg">
               <h2 className="text-3xl font-black text-gray-900 mb-6">Send us a Message</h2>
+
               <form onSubmit={handleSubmit} className="space-y-5">
+
                 <input
                   type="text"
                   name="name"
@@ -81,6 +150,7 @@ export default function ContactPage() {
                   required
                   className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#195a88] focus:outline-none focus:ring-2 focus:ring-teal-100 transition-all duration-300"
                 />
+
                 <input
                   type="email"
                   name="email"
@@ -90,6 +160,7 @@ export default function ContactPage() {
                   required
                   className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#195a88] focus:outline-none focus:ring-2 focus:ring-teal-100 transition-all duration-300"
                 />
+
                 <input
                   type="tel"
                   name="phone"
@@ -98,6 +169,7 @@ export default function ContactPage() {
                   onChange={handleChange}
                   className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#195a88] focus:outline-none focus:ring-2 focus:ring-teal-100 transition-all duration-300"
                 />
+
                 <select
                   name="service"
                   value={formData.service}
@@ -113,6 +185,7 @@ export default function ContactPage() {
                   <option value="moveout">Move-In/Move-Out</option>
                   <option value="other">Other</option>
                 </select>
+
                 <input
                   type="date"
                   name="date"
@@ -120,6 +193,7 @@ export default function ContactPage() {
                   onChange={handleChange}
                   className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#195a88] focus:outline-none focus:ring-2 focus:ring-teal-100 transition-all duration-300"
                 />
+
                 <textarea
                   name="message"
                   placeholder="Your Message"
@@ -128,14 +202,16 @@ export default function ContactPage() {
                   rows={4}
                   className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#195a88] focus:outline-none focus:ring-2 focus:ring-teal-100 transition-all duration-300 resize-none"
                 ></textarea>
+
                 <button
                   type="submit"
-                  className="w-full bg-[#195a88] text-white py-3 rounded-lg font-bold flex items-center justify-center gap-2 hover:shadow-lg transition-all duration-300 transform hover:scale-105"
+                  className="w-full bg-[#00FFFF] text-white py-3 rounded-lg font-bold flex items-center justify-center gap-2 hover:shadow-lg transition-all duration-300 transform hover:scale-105"
                 >
                   <Send size={18} />
                   Send Message
                 </button>
               </form>
+
               {submitted && (
                 <div className="mt-4 p-4 bg-green-100 border border-green-400 rounded-lg text-green-800 font-semibold animate-pulse">
                   ✓ Message sent successfully! We'll get back to you soon.
@@ -143,7 +219,7 @@ export default function ContactPage() {
               )}
             </div>
 
-            {/* Info */}
+            {/* INFORMATION SIDE */}
             <div className="space-y-8">
               <div>
                 <h2 className="text-3xl font-black text-gray-900 mb-4">Quick Response</h2>
@@ -174,27 +250,28 @@ export default function ContactPage() {
                 </ul>
               </div>
             </div>
+
           </div>
         </div>
       </section>
-      {/* MAP SECTION */}
-<section className="px-6 md:px-12 pb-20 bg-white">
-  <div className="max-w-7xl mx-auto">
-    <h2 className="text-3xl font-black text-gray-900 mb-6">Find Us on the Map</h2>
 
-    <div className="rounded-2xl overflow-hidden shadow-xl border border-gray-200">
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3581.3358037182666!2d55.45040507522789!3d25.41868027755421!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDI1JzA3LjMiTiA1NcKwMjcnMTAuNyJF!5e0!3m2!1sen!2sae!4v1739870000000"
-        width="100%"
-        height="450"
-        loading="lazy"
-        allowFullScreen
-        referrerPolicy="no-referrer-when-downgrade"
-      ></iframe>
-    </div>
-  </div>
-</section>
+      {/* GOOGLE MAP */}
+      <section className="px-6 md:px-12 pb-20 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl font-black text-gray-900 mb-6">Find Us on the Map</h2>
 
+          <div className="rounded-2xl overflow-hidden shadow-xl border border-gray-200">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3581.3358037182666!2d55.45040507522789!3d25.41868027755421!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDI1JzA3LjMiTiA1NcKwMjcnMTAuNyJF!5e0!3m2!1sen!2sae!4v1739870000000"
+              width="100%"
+              height="450"
+              loading="lazy"
+              allowFullScreen
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </section>
 
       <Footer />
     </main>

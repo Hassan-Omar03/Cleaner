@@ -77,10 +77,10 @@ export default function ServicesPage() {
     <main className="min-h-screen bg-white">
       <Header />
 
-      <section className="py-20 px-6 md:px-12 bg-[#195a88] text-white">
+      <section className="py-20 px-6 md:px-12 bg-[#00FFFF] text-white">
         <div className="max-w-7xl mx-auto">
-          <h1 className="text-5xl md:text-6xl font-black mb-4">Our Services</h1>
-          <p className="text-xl text-teal-100 max-w-3xl">Comprehensive cleaning solutions tailored to your specific needs and budget</p>
+          <h1 className="text-5xl md:text-6xl text-white font-black mb-4">Our Services</h1>
+          <p className="text-xl text-black max-w-3xl">Comprehensive cleaning solutions tailored to your specific needs and budget</p>
         </div>
       </section>
 
@@ -109,13 +109,13 @@ export default function ServicesPage() {
                   <ul className="space-y-2">
                     {service.features.map((feature, i) => (
                       <li key={i} className="flex items-center gap-2 text-sm text-gray-700">
-                        <span className="w-1.5 h-1.5 bg-yellow-500 rounded-full"></span>
+                        <span className="w-1.5 h-1.5 bg-black rounded-full"></span>
                         {feature}
                       </li>
                     ))}
                   </ul>
 
-                  <Link href="/contact" className="inline-flex items-center gap-2 text-[#195a88] transition-colors duration-300 pt-2 w-fit">
+                  <Link href="/contact" className="inline-flex items-center gap-2 text-[#00FFFF] transition-colors duration-300 pt-2 w-fit">
                     Get Quote
                     <ArrowRight size={18} />
                   </Link>

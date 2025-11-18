@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Poppins, Inter } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
+import logo from '@/public/logo.jpeg'
 
 const poppins = Poppins({ 
   subsets: ['latin'],
@@ -24,7 +25,7 @@ export const metadata: Metadata = {
     description: 'Shine up your home — Shine up your day',
     type: 'website',
   },
-    generator: 'v0.app'
+  generator: 'v0.app'
 }
 
 export default function RootLayout({
@@ -35,6 +36,25 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+
+        {/* ---- FULL FAVICON SET ---- */}
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
+
+        {/* Apple icon */}
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
+        {/* PWA & Android */}
+        <link rel="manifest" href="/site.webmanifest" />
+        <link rel="icon" type="image/png" sizes="192x192" href="/web-app-manifest-192x192.png" />
+        <link rel="icon" type="image/png" sizes="512x512" href="/web-app-manifest-512x512.png" />
+
+        {/* Theme */}
+        <meta name="theme-color" content="#ffffff" />
+        <meta name="msapplication-TileColor" content="#ffffff" />
+
+        {/* ---- SCHEMA.ORG ---- */}
         <script type="application/ld+json">
           {JSON.stringify({
             '@context': 'https://schema.org',
@@ -55,7 +75,9 @@ export default function RootLayout({
             hoursOfOperation: 'Mo-Su 08:00-20:00',
           })}
         </script>
+
       </head>
+
       <body className={`${poppins.variable} ${inter.variable} font-sans antialiased`}>
         {children}
         <Analytics />

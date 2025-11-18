@@ -104,7 +104,7 @@ export default function HomePage() {
       <Header />
 
       {/* HERO */}
-      <section className="relative py-20 px-4 sm:px-6 md:px-12 bg-[#195a88] text-white overflow-hidden">
+      <section className="relative py-20 px-4 sm:px-6 md:px-12 bg-[#00FFFF] text-white overflow-hidden">
         <div className="absolute inset-0 opacity-10 overflow-hidden">
           <div className="absolute top-0 left-0 w-72 h-72 sm:w-96 sm:h-96  rounded-full blur-3xl"></div>
           <div className="absolute bottom-0 right-0 w-72 h-72 sm:w-96 sm:h-96 bg-teal-500 rounded-full blur-3xl"></div>
@@ -116,24 +116,24 @@ export default function HomePage() {
               <h1 className="text-4xl sm:text-5xl md:text-6xl font-black leading-tight">
                 Shine up your home — Shine up your day
               </h1>
-              <p className="text-xl text-teal-100">
+              <p className="text-xl text-black">
                 Professional cleaning services for your home and office
               </p>
-              <p className="text-gray-100">
+              <p className="text-black">
                 Experience pristine cleanliness with HODA SHINE SERVICES.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 pt-6">
                 <Link
                   href="/contact"
-                  className="bg-yellow-500 text-gray-900 px-8 py-4 rounded-lg font-bold hover:bg-yellow-600 transition-all duration-300 hover:shadow-lg hover:scale-105 inline-flex items-center"
+                  className="bg-black text-white px-8 py-4 rounded-lg font-bold  transition-all duration-300 hover:shadow-lg hover:scale-105 inline-flex items-center"
                 >
                   Get Your Free Quote <ArrowRight className="ml-2" size={20} />
                 </Link>
 
                 <Link
                   href="/services"
-                  className="bg-red-600 bg-opacity-20 backdrop-blur text-white px-8 py-4 rounded-lg font-bold hover:bg-opacity-30 border border-white border-opacity-30 inline-flex items-center"
+                  className="bg-black bg-opacity-20 backdrop-blur text-white px-8 py-4 rounded-lg font-bold hover:bg-opacity-30  inline-flex items-center"
                 >
                   View All Services
                 </Link>
@@ -161,7 +161,7 @@ export default function HomePage() {
           </div>
 
           <div className="space-y-6">
-            <p className="text-yellow-600 font-bold text-lg">WHO WE ARE</p>
+            <p className="text-[#00FFFF] font-bold text-lg">WHO WE ARE</p>
             <h2 className="text-4xl md:text-5xl font-black">Your Trusted Cleaning Partner</h2>
 
             <p className="text-gray-700">
@@ -176,7 +176,7 @@ export default function HomePage() {
                 "Available 7 days a week",
               ].map((item, i) => (
                 <li key={i} className="flex items-center gap-3">
-                  <span className="w-2 h-2 bg-yellow-500 rounded-full"></span>
+                  <span className="w-2 h-2 bg-black rounded-full"></span>
                   {item}
                 </li>
               ))}
@@ -184,7 +184,7 @@ export default function HomePage() {
 
             <Link
               href="/about"
-              className="inline-flex items-center gap-2 text-[#195a88] font-bold hover:text-teal-900"
+              className="inline-flex items-center gap-2 text-[#00FFFF] font-bold"
             >
               Learn more <ArrowRight size={18} />
             </Link>
@@ -195,7 +195,7 @@ export default function HomePage() {
       {/* SERVICES */}
       <section className="py-20 px-4 sm:px-6 md:px-12 bg-gray-50">
         <div className="max-w-7xl mx-auto">
-          <p className="text-yellow-600 font-bold text-lg">OUR SERVICES</p>
+          <p className="text-[#00FFFF] font-bold text-lg">OUR SERVICES</p>
           <h2 className="text-4xl md:text-5xl font-black mt-2">Professional Cleaning Solutions</h2>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
@@ -214,7 +214,7 @@ export default function HomePage() {
 
           <Link
             href="/services"
-            className="bg-[#195a88] text-white px-8 py-4 rounded-lg font-bold inline-flex items-center mt-10"
+            className="bg-[#00FFFF] text-white px-8 py-4 rounded-lg font-bold inline-flex items-center mt-10"
           >
             View All Services <ArrowRight className="ml-2" size={20} />
           </Link>
@@ -224,13 +224,13 @@ export default function HomePage() {
       {/* TESTIMONIALS */}
       <section className="py-20 px-4 sm:px-6 md:px-12 bg-white">
         <div className="max-w-7xl mx-auto">
-          <p className="text-yellow-600 font-bold text-lg mb-1">CLIENT TESTIMONIALS</p>
+          <p className="text-[#00FFFF] font-bold text-lg mb-1">CLIENT TESTIMONIALS</p>
           <h2 className="text-4xl md:text-5xl font-black">What Our Clients Say</h2>
 
           {/* Add Review Button */}
           <button
             onClick={() => setShowModal(true)}
-            className="bg-[#195a88] text-white px-6 py-3 rounded-lg font-bold mt-6 hover:opacity-90"
+            className="bg-[#00FFFF] text-white px-6 py-3 rounded-lg font-bold mt-6 hover:opacity-90"
           >
             Add Your Review
           </button>
@@ -294,7 +294,7 @@ export default function HomePage() {
               </button>
               <button
                 onClick={handleSubmitReview}
-                className="px-4 py-2 bg-[#195a88] text-white rounded"
+                className="px-4 py-2 bg-[#00FFFF] text-white rounded"
               >
                 Submit
               </button>
