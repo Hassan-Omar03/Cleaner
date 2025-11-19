@@ -34,17 +34,18 @@ export default function Header() {
   return (
     <>
       {/* TOP BAR */}
-<div className="hidden md:flex bg-[#00FFFF] text-white text-sm py-4 px-6 justify-between items-center shadow-md">
+<div className="hidden md:flex bg-[#00E5FF] text-white text-sm py-4 px-6 justify-between items-center shadow-md">
   <div className="flex gap-8">
-    <a
-  href="https://www.google.com/maps?q=25.41868027755421,55.45040507522789"
+   <a
+  href="https://www.google.com/maps/place/25%C2%B025'07.3%22N+55%C2%B027'10.7%22E/@25.4186802,55.4504051,795m/data=!3m2!1e3!4b1!4m4!3m3!8m2!3d25.4186802!4d55.45298"
   target="_blank"
   rel="noopener noreferrer"
-  className="flex items-center gap-2 text-black  transition-colors cursor-pointer"
+  className="flex items-center gap-2 text-black transition-colors cursor-pointer"
 >
   <MapPin size={16} />
   <span>Office: Free Zone Ajman — Block C1</span>
 </a>
+
 
 
     <div className="flex items-center gap-2 text-black">
@@ -77,7 +78,7 @@ export default function Header() {
 
     <Link
       href="/contact"
-      className="bg-[#00FFFF] text-white px-6 py-2 rounded-lg hover:bg-yellow-600 transition-all duration-300 font-bold shadow-md hover:shadow-lg transform hover:scale-105"
+      className="bg-[#00E5FF] text-white px-6 py-2 rounded-lg hover:bg-yellow-600 transition-all duration-300 font-bold shadow-md hover:shadow-lg transform hover:scale-105"
     >
       Contact Us
     </Link>
@@ -103,7 +104,7 @@ export default function Header() {
             </div>
 
             <div className="leading-tight">
-              <h1 className="text-2xl md:text-xl font-extrabold text-[#00FFFF] tracking-wide">
+              <h1 className="text-2xl md:text-xl font-extrabold text-blue-900 tracking-wide">
                 HODA SHINE
               </h1>
               <p className="text-sm md:text-xs text-gray-600 tracking-widest">
@@ -124,7 +125,7 @@ export default function Header() {
               >
                 {item.label}
                 {isActive(item.href) && (
-                  <span className="absolute bottom-0 left-0 w-full h-1 bg-[#00FFFF]" />
+                  <span className="absolute bottom-0 left-0 w-full h-1 bg-[#00E5FF]" />
                 )}
               </Link>
             ))}

@@ -11,7 +11,7 @@ export default function Footer() {
   }
 
   return (
-    <footer className="bg-[#00FFFF] text-white py-16 px-6 md:px-12">
+    <footer className="bg-[#00E5FF] text-white py-16 px-6 md:px-12">
       <div className="max-w-7xl mx-auto">
         <div className="grid md:grid-cols-3 gap-12 mb-12">
 
@@ -150,7 +150,7 @@ export default function Footer() {
 
           <button
             onClick={scrollToTop}
-            className="w-12 h-12 bg-[#00FFFF] text-gray-900 rounded-full flex items-center justify-center hover:scale-110 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 font-bold"
+            className="w-12 h-12 bg-[#00E5FF] text-gray-900 rounded-full flex items-center justify-center hover:scale-110 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 font-bold"
           >
             <ArrowUp size={24} />
           </button>

@@ -98,7 +98,7 @@ export default function HomePage() {
       <Header />
 
       {/* HERO */}
-      <section className="relative py-20 px-4 sm:px-6 md:px-12 bg-[#00FFFF] text-white overflow-hidden">
+      <section className="relative py-20 px-4 sm:px-6 md:px-12 bg-[#00E5FF] text-white overflow-hidden">
         <div className="relative z-10 max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-black leading-tight">
@@ -187,7 +187,7 @@ export default function HomePage() {
 
           <Link
             href="/services"
-            className="bg-[#00FFFF] text-blue-900 px-8 py-4 rounded-lg font-bold inline-flex items-center mt-10"
+            className="bg-[#00E5FF] text-blue-900 px-8 py-4 rounded-lg font-bold inline-flex items-center mt-10"
           >
             View All Services  <ArrowRight className="ml-2" size={20} />
           </Link>
@@ -202,7 +202,7 @@ export default function HomePage() {
 
           <button
             onClick={() => setShowModal(true)}
-            className="bg-[#00FFFF] text-blue-900 px-6 py-3 rounded-lg font-bold mt-6"
+            className="bg-[#00E5FF] text-blue-900 px-6 py-3 rounded-lg font-bold mt-6"
           >
             Add Your Review
           </button>

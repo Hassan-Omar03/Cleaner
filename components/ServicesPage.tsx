@@ -105,7 +105,7 @@ export default function ServicesPageUI() {
     <main className="min-h-screen bg-white">
       <Header />
 
-      <section className="py-20 px-6 md:px-12 bg-[#00FFFF] text-white">
+      <section className="py-20 px-6 md:px-12 bg-[#00E5FF] text-white">
         <div className="max-w-7xl mx-auto">
           <h1 className="text-5xl md:text-6xl font-black mb-4">Our Services</h1>
           <p className="text-xl text-black max-w-3xl">

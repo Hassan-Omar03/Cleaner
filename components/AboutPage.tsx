@@ -28,7 +28,7 @@ export default function About() {
       <Header />
 
       {/* HERO */}
-      <section className="py-20 px-6 md:px-12 bg-[#00FFFF] text-white">
+      <section className="py-20 px-6 md:px-12 bg-[#00E5FF] text-white">
         <div className="max-w-7xl mx-auto">
           <h1 className="text-5xl md:text-6xl font-black mb-4">About HODA SHINE</h1>
           <p className="text-xl text-black max-w-3xl">
@@ -84,7 +84,7 @@ export default function About() {
       </section>
 
       {/* COMPANY STATS */}
-      <section className="py-20 px-6 md:px-12 bg-[#00FFFF] text-white">
+      <section className="py-20 px-6 md:px-12 bg-[#00E5FF] text-white">
         <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
           {stats.map((stat, i) => (
             <div key={i}>

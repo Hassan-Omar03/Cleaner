@@ -64,7 +64,7 @@ ${formData.message}
       <Header />
 
       {/* HERO */}
-      <section className="py-20 px-6 md:px-12 bg-[#00FFFF] text-white">
+      <section className="py-20 px-6 md:px-12 bg-[#00E5FF] text-white">
         <div className="max-w-7xl mx-auto">
           <h1 className="text-5xl md:text-6xl font-black mb-4">Get In Touch</h1>
           <p className="text-xl text-black max-w-3xl">
@@ -123,7 +123,7 @@ ${formData.message}
             {/* LOCATION */}
             {/* LOCATION */}
 <a
-  href="https://www.google.com/maps?q=25.41868027755421,55.45040507522789"
+  href="https://www.google.com/maps/place/25%C2%B025'07.3%22N+55%C2%B027'10.7%22E/@25.4186802,55.4504051,795m/data=!3m2!1e3!4b1!4m4!3m3!8m2!3d25.4186802!4d55.45298"
   target="_blank"
   rel="noopener noreferrer"
   className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 block cursor-pointer"
@@ -210,7 +210,7 @@ ${formData.message}
 
                 <button
                   type="submit"
-                  className="w-full bg-[#00FFFF] text-white py-3 rounded-lg font-bold flex items-center justify-center gap-2 hover:shadow-lg transition-all duration-300 transform hover:scale-105"
+                  className="w-full bg-[#00E5FF] text-white py-3 rounded-lg font-bold flex items-center justify-center gap-2 hover:shadow-lg transition-all duration-300 transform hover:scale-105"
                 >
                   <Send size={18} />
                   Send Message
@@ -262,21 +262,21 @@ ${formData.message}
 
       {/* GOOGLE MAP */}
       <section className="px-6 md:px-12 pb-20 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-black text-gray-900 mb-6">Find Us on the Map</h2>
+  <div className="max-w-7xl mx-auto">
+    <h2 className="text-3xl font-black text-gray-900 mb-6">Find Us on the Map</h2>
 
-          <div className="rounded-2xl overflow-hidden shadow-xl border border-gray-200">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3581.3358037182666!2d55.45040507522789!3d25.41868027755421!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDI1JzA3LjMiTiA1NcKwMjcnMTAuNyJF!5e0!3m2!1sen!2sae!4v1739870000000"
-              width="100%"
-              height="450"
-              loading="lazy"
-              allowFullScreen
-              referrerPolicy="no-referrer-when-downgrade"
-            ></iframe>
-          </div>
-        </div>
-      </section>
+    <div className="rounded-2xl overflow-hidden shadow-xl border border-gray-200">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3581.3358037182666!2d55.45040507522789!3d25.41868027755421!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjUuNDE4NjggNTUuNDUwNDA1!5e0!3m2!1sen!2sae!4v1739870000000"
+        width="100%"
+        height="450"
+        loading="lazy"
+        allowFullScreen
+        referrerPolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div>
+  </div>
+</section>
 
       <Footer />
     </main>
