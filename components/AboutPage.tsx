@@ -124,7 +124,7 @@ export default function About() {
       <section className=" px-6 md:px-12 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl font-black mb-4">Our Work Experience</h2>
-          <p className="text-xl text-[#00FFFF] font-semibold mb-12">
+          <p className="text-xl text-blue-900 font-semibold mb-12">
             Standard Cleaning with a Personal Touch
           </p>
 

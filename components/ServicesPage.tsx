@@ -145,7 +145,7 @@ export default function ServicesPageUI() {
 
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-2 text-[#00FFFF] font-bold"
+                  className="inline-flex items-center gap-2 text-blue-900 font-bold"
                 >
                   Get Quote
                   <ArrowRight size={18} />
