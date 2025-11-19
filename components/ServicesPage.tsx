@@ -24,7 +24,7 @@ export default function ServicesPageUI() {
       id: 2,
       title: "Carpet & Sofa Cleaning",
       description: "Deep-cleaned carpets & sofas, restoring comfort.",
-      image: "/home2.jpg",
+      image: "/sofa.png",
       features: [
         "Deep steam cleaning",
         "Stain & spot removal",

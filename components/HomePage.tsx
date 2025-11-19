@@ -18,7 +18,7 @@ export default function HomePage() {
       id: 2,
       title: "Carpet & Sofa Cleaning",
       description: "Deep-cleaned carpets & sofas, restoring comfort.",
-      image: "/home2.jpg",
+      image: "/sofa.png",
     },
     {
       id: 3,
