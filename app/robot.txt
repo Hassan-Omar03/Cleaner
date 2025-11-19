@@ -1,0 +1,15 @@
+// app/robots.txt/route.ts
+import { NextResponse } from 'next/server'
+
+const BASE_URL = 'https://hodashine.ae'
+
+export async function GET() {
+  const content = `User-agent: *
+Allow: /
+Sitemap: ${BASE_URL}/sitemap.xml
+Host: ${BASE_URL}
+`
+  return new NextResponse(content, {
+    headers: { 'Content-Type': 'text/plain' },
+  })
+}

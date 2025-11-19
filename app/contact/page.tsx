@@ -1,279 +1,148 @@
-'use client'
+import Contact from "@/components/ContactPage";
 
-import Header from '@/components/header'
-import Footer from '@/components/footer'
-import { Phone, Mail, MapPin, Clock, Send, MessageCircle } from 'lucide-react'
-import { useState } from 'react'
+export const metadata = {
+  title: "Contact HODA SHINE — Cleaning Services in Ajman, Dubai & Sharjah",
+  description:
+    "Contact HODA SHINE SERVICES for home, office, villa, carpet, sofa, AC cleaning & maid services in Ajman, Dubai & Sharjah. Fast response, affordable pricing.",
+  keywords: [
+    "contact cleaning service Ajman",
+    "cleaners UAE phone number",
+    "cleaning services Dubai",
+    "maid service Ajman",
+    "book cleaning UAE",
+    "home cleaners UAE",
+    "office cleaning Ajman",
+    "best cleaning company UAE",
+    "deep cleaning contact UAE",
+    "HODA SHINE SERVICES contact"
+  ],
+
+  alternates: {
+    canonical: "https://hodashine.ae/contact",
+  },
+
+  openGraph: {
+    title: "Contact HODA SHINE SERVICES | UAE Cleaning Experts",
+    description:
+      "Get in touch with HODA SHINE for professional cleaning services across Ajman, Sharjah & Dubai.",
+    url: "https://hodashine.ae/contact",
+    siteName: "HODA SHINE SERVICES",
+    type: "website",
+    images: [
+      {
+        url: "/home1.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Hoda Shine Contact Page",
+      },
+    ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Contact HODA SHINE | Best Cleaners in UAE",
+    description:
+      "Reach out to HODA SHINE SERVICES for fast, professional cleaning in Ajman, Dubai & Sharjah.",
+    images: ["/home1.jpg"],
+  },
+
+  other: {
+    "og:locale": "en_US",
+
+    // Business contact details
+    "business:contact_data:street_address": "Free Zone Ajman — Block C1",
+    "business:contact_data:locality": "Ajman",
+    "business:contact_data:country_name": "United Arab Emirates",
+    "business:contact_data:phone_number": "+971569407167",
+
+    // Social Links
+    "sameAs:facebook": "https://www.facebook.com/share/1AddGk8yb1/",
+    "sameAs:instagram":
+      "https://www.instagram.com/hodashineservices?igsh=MTl0Mm9rZzJxb3J0dg==",
+    "sameAs:tiktok":
+      "https://www.tiktok.com/@www.tiktok.comhodashines?_r=1&_t=ZS-91R49SwReef",
+
+    // WhatsApp
+    "contactPoint:whatsapp": "https://wa.me/971522032532",
+  },
+};
 
 export default function ContactPage() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    service: '',
-    date: '',
-    message: ''
-  })
-  const [submitted, setSubmitted] = useState(false)
-
-  // Handle form input
-  const handleChange = (e: any) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value })
-  }
-
-  // WhatsApp Submit Function
-  const handleWhatsAppSubmit = () => {
-    const phoneNumber = "971522032532"; // WhatsApp receiver
-
-    const message = `📥 *New Contact Form Submission*
-
-👤 *Name:* ${formData.name}
-📧 *Email:* ${formData.email}
-📞 *Phone:* ${formData.phone}
-🧹 *Service:* ${formData.service}
-📅 *Preferred Date:* ${formData.date}
-
-📝 *Message:*
-${formData.message}
-`;
-
-    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`
-    window.open(url, "_blank")
-  }
-
-  // Handle form submit
-  const handleSubmit = (e: any) => {
-    e.preventDefault()
-    handleWhatsAppSubmit()
-    setSubmitted(true)
-
-    setTimeout(() => setSubmitted(false), 3000)
-
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      service: '',
-      date: '',
-      message: ''
-    })
-  }
-
   return (
-    <main className="min-h-screen bg-white">
-      <Header />
+    <>
+      <Contact />
 
-      {/* HERO */}
-      <section className="py-20 px-6 md:px-12 bg-[#00FFFF] text-white">
-        <div className="max-w-7xl mx-auto">
-          <h1 className="text-5xl md:text-6xl font-black mb-4">Get In Touch</h1>
-          <p className="text-xl text-black max-w-3xl">
-            We're here to help. Contact us for a free quote or any questions you may have.
-          </p>
-        </div>
-      </section>
+      {/* CONTACT PAGE JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ContactPage",
+            name: "Contact HODA SHINE SERVICES",
+            url: "https://hodashine.ae/contact",
+            description:
+              "Get in touch with HODA SHINE SERVICES for cleaning services in Ajman, Sharjah, Dubai.",
+            contactPoint: {
+              "@type": "ContactPoint",
+              telephone: "+971569407167",
+              contactType: "customer service",
+              areaServed: ["Ajman", "Dubai", "Sharjah"],
+              availableLanguage: ["English"],
+            },
+          }),
+        }}
+      />
 
-      {/* CONTACT BLOCKS */}
-      <section className="py-20 px-6 md:px-12 bg-gray-50">
-        <div className="max-w-7xl mx-auto">
-
-          {/* CONTACT INFO CARDS */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
-
-            {/* CALL */}
-            <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100">
-              <Phone className="text-[#00FFFF] mb-4" size={32} />
-              <h3 className="text-lg font-bold text-gray-900 mb-2">Call</h3>
-
-              <a 
-                href="tel:+971569407167"
-                className="text-black font-medium block hover:text-[#195a88] transition"
-              >
-                +971 056 940 7167
-              </a>
-            </div>
-
-            {/* WHATSAPP */}
-            <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100">
-              <MessageCircle className="text-[#00FFFF] mb-4" size={32} />
-              <h3 className="text-lg font-bold text-gray-900 mb-2">WhatsApp</h3>
-
-              <a
-                href="https://wa.me/971522032532"
-                target="_blank"
-                className="text-black font-medium block hover:text-green-600 transition"
-              >
-                +971 52 203 2532
-              </a>
-            </div>
-
-            {/* EMAIL */}
-            <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100">
-              <Mail className="text-[#00FFFF] mb-4" size={32} />
-              <h3 className="text-lg font-bold text-gray-900 mb-2">Email</h3>
-
-              <a 
-                href="mailto:hodashineservices@gmail.com"
-                className="text-black"
-              >
-                hodashineservices@gmail.com
-              </a>
-            </div>
-
-            {/* LOCATION */}
-            <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100">
-              <MapPin className="text-[#00FFFF] mb-4" size={32} />
-              <h3 className="text-lg font-bold text-gray-900 mb-2">Location</h3>
-
-              <p className="text-black">
-                Free Zone Ajman, Block C1, UAE
-              </p>
-            </div>
-
-          </div>
-
-          {/* FORM + SIDEBAR */}
-          <div className="grid md:grid-cols-2 gap-12">
-
-            {/* FORM */}
-            <div className="bg-white rounded-2xl p-8 shadow-lg">
-              <h2 className="text-3xl font-black text-gray-900 mb-6">Send us a Message</h2>
-
-              <form onSubmit={handleSubmit} className="space-y-5">
-
-                <input
-                  type="text"
-                  name="name"
-                  placeholder="Your Name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  required
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#195a88] focus:outline-none focus:ring-2 focus:ring-teal-100 transition-all duration-300"
-                />
-
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="Your Email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  required
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#195a88] focus:outline-none focus:ring-2 focus:ring-teal-100 transition-all duration-300"
-                />
-
-                <input
-                  type="tel"
-                  name="phone"
-                  placeholder="Phone Number"
-                  value={formData.phone}
-                  onChange={handleChange}
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#195a88] focus:outline-none focus:ring-2 focus:ring-teal-100 transition-all duration-300"
-                />
-
-                <select
-                  name="service"
-                  value={formData.service}
-                  onChange={handleChange}
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#195a88] focus:outline-none focus:ring-2 focus:ring-teal-100 transition-all duration-300"
-                >
-                  <option value="">Select a Service</option>
-                  <option value="residential">Residential Cleaning</option>
-                  <option value="office">Office Cleaning</option>
-                  <option value="deep">Deep Cleaning</option>
-                  <option value="carpet">Carpet Cleaning</option>
-                  <option value="windows">Window Cleaning</option>
-                  <option value="moveout">Move-In/Move-Out</option>
-                  <option value="other">Other</option>
-                </select>
-
-                <input
-                  type="date"
-                  name="date"
-                  value={formData.date}
-                  onChange={handleChange}
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#195a88] focus:outline-none focus:ring-2 focus:ring-teal-100 transition-all duration-300"
-                />
-
-                <textarea
-                  name="message"
-                  placeholder="Your Message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  rows={4}
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#195a88] focus:outline-none focus:ring-2 focus:ring-teal-100 transition-all duration-300 resize-none"
-                ></textarea>
-
-                <button
-                  type="submit"
-                  className="w-full bg-[#00FFFF] text-white py-3 rounded-lg font-bold flex items-center justify-center gap-2 hover:shadow-lg transition-all duration-300 transform hover:scale-105"
-                >
-                  <Send size={18} />
-                  Send Message
-                </button>
-              </form>
-
-              {submitted && (
-                <div className="mt-4 p-4 bg-green-100 border border-green-400 rounded-lg text-green-800 font-semibold animate-pulse">
-                  ✓ Message sent successfully! We'll get back to you soon.
-                </div>
-              )}
-            </div>
-
-            {/* INFORMATION SIDE */}
-            <div className="space-y-8">
-              <div>
-                <h2 className="text-3xl font-black text-gray-900 mb-4">Quick Response</h2>
-                <p className="text-lg text-gray-700 leading-relaxed mb-4">
-                  We value your time and typically respond to inquiries within 1-2 hours during business hours.
-                </p>
-              </div>
-
-              <div className="bg-gradient-to-br from-teal-50 to-yellow-50 rounded-xl p-6 border-2 border-teal-200">
-                <h3 className="font-bold text-gray-900 mb-3">Service Areas</h3>
-                <ul className="space-y-2 text-gray-700">
-                  <li>✓ Dubai</li>
-                  <li>✓ Sharjah</li>
-                  <li>✓ Ajman</li>
-                  <li>✓ Umm Al Quwain</li>
-                  <li>✓ Ras Al Khaimah</li>
-                </ul>
-              </div>
-
-              <div className="bg-gradient-to-br from-yellow-50 to-orange-50 rounded-xl p-6 border-2 border-yellow-200">
-                <h3 className="font-bold text-gray-900 mb-3">Why Choose Our Service?</h3>
-                <ul className="space-y-2 text-sm text-gray-700">
-                  <li>✓ Certified professionals</li>
-                  <li>✓ Eco-friendly products</li>
-                  <li>✓ 100% satisfaction guarantee</li>
-                  <li>✓ Transparent pricing</li>
-                  <li>✓ Full insurance coverage</li>
-                </ul>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-      {/* GOOGLE MAP */}
-      <section className="px-6 md:px-12 pb-20 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-black text-gray-900 mb-6">Find Us on the Map</h2>
-
-          <div className="rounded-2xl overflow-hidden shadow-xl border border-gray-200">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3581.3358037182666!2d55.45040507522789!3d25.41868027755421!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDI1JzA3LjMiTiA1NcKwMjcnMTAuNyJF!5e0!3m2!1sen!2sae!4v1739870000000"
-              width="100%"
-              height="450"
-              loading="lazy"
-              allowFullScreen
-              referrerPolicy="no-referrer-when-downgrade"
-            ></iframe>
-          </div>
-        </div>
-      </section>
-
-      <Footer />
-    </main>
-  )
+      {/* LOCAL BUSINESS JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            name: "HODA SHINE SERVICES",
+            image: "https://hodashine.ae/home1.jpg",
+            url: "https://hodashine.ae/contact",
+            telephone: "+971569407167",
+            email: "hodashineservices@gmail.com",
+            priceRange: "AED 25 - AED 1000",
+            address: {
+              "@type": "PostalAddress",
+              streetAddress: "Free Zone Ajman — Block C1",
+              addressLocality: "Ajman",
+              addressCountry: "AE",
+            },
+            geo: {
+              "@type": "GeoCoordinates",
+              latitude: "25.405216",
+              longitude: "55.513643",
+            },
+            sameAs: [
+              "https://www.facebook.com/share/1AddGk8yb1/",
+              "https://www.instagram.com/hodashineservices?igsh=MTl0Mm9rZzJxb3J0dg==",
+              "https://www.tiktok.com/@www.tiktok.comhodashines?_r=1&_t=ZS-91R49SwReef",
+              "https://wa.me/971522032532"
+            ],
+            openingHoursSpecification: [
+              {
+                "@type": "OpeningHoursSpecification",
+                dayOfWeek: [
+                  "Monday",
+                  "Tuesday",
+                  "Wednesday",
+                  "Thursday",
+                  "Friday",
+                  "Saturday",
+                  "Sunday"
+                ],
+                opens: "08:00",
+                closes: "20:00"
+              }
+            ]
+          }),
+        }}
+      />
+    </>
+  );
 }

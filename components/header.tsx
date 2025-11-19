@@ -36,10 +36,16 @@ export default function Header() {
       {/* TOP BAR */}
 <div className="hidden md:flex bg-[#00FFFF] text-white text-sm py-4 px-6 justify-between items-center shadow-md">
   <div className="flex gap-8">
-    <div className="flex items-center gap-2 text-black">
-      <MapPin size={16} />
-      <span>Office: Free Zone Ajman — Block C1</span>
-    </div>
+    <a
+  href="https://www.google.com/maps?q=25.41868027755421,55.45040507522789"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="flex items-center gap-2 text-black  transition-colors cursor-pointer"
+>
+  <MapPin size={16} />
+  <span>Office: Free Zone Ajman — Block C1</span>
+</a>
+
 
     <div className="flex items-center gap-2 text-black">
       <Mail size={16} />

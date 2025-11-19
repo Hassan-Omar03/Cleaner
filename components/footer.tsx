@@ -29,9 +29,9 @@ export default function Footer() {
   />
 </div>
 
-            <h3 className="text-3xl font-bold mb-2">HODA SHINE</h3>
-            <p className="text-black font-bold text-lg mb-4">SERVICES</p>
-            <p className="text-white leading-relaxed">
+            <h3 className="text-3xl font-bold mb-2 text-blue-900">HODA SHINE</h3>
+            <p className="text-blue-900 font-bold text-lg mb-4">SERVICES</p>
+            <p className="text-blue-900 leading-relaxed">
               Professional cleaning services providing top quality home and office
               cleaning across Dubai, Sharjah and Ajman with eco-friendly solutions.
             </p>
@@ -44,7 +44,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/"
-                  className="text-white  hover:translate-x-2 transition-all duration-300 font-medium inline-block"
+                  className="text-blue-900  hover:translate-x-2 transition-all duration-300 font-medium inline-block"
                 >
                   → Home
                 </Link>
@@ -52,7 +52,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/about"
-                  className="text-white  hover:translate-x-2 transition-all duration-300 font-medium inline-block"
+                  className="text-blue-900  hover:translate-x-2 transition-all duration-300 font-medium inline-block"
                 >
                   → About Us
                 </Link>
@@ -60,7 +60,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/services"
-                  className="text-white hover:translate-x-2 transition-all duration-300 font-medium inline-block"
+                  className="text-blue-900 hover:translate-x-2 transition-all duration-300 font-medium inline-block"
                 >
                   → Our Services
                 </Link>
@@ -68,7 +68,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/contact"
-                  className="text-white  hover:translate-x-2 transition-all duration-300 font-medium inline-block"
+                  className="text-blue-900  hover:translate-x-2 transition-all duration-300 font-medium inline-block"
                 >
                   → Contact Us
                 </Link>
@@ -82,14 +82,14 @@ export default function Footer() {
   <div className="space-y-3 mb-6">
 
     {/* CALL NUMBER */}
-    <p className="text-white font-medium flex items-center gap-2">
-      <Phone className="text-white text-lg" />
+    <p className="text-blue-900 font-medium flex items-center gap-2">
+      <Phone className="text-blue-900 text-lg" />
       +971 56 940 7167
     </p>
 
     {/* WHATSAPP NUMBER */}
     <p
-      className="text-white font-medium flex items-center gap-2 cursor-pointer "
+      className="text-blue-900 font-medium flex items-center gap-2 cursor-pointer "
       onClick={() =>
         window.open(
           "https://wa.me/971522032532?text=Hi%2C%20I%20want%20to%20know%20more%20about%20HODA%20SHINE%20SERVICES.",
@@ -97,44 +97,56 @@ export default function Footer() {
         )
       }
     >
-      <MessageCircle className="text-white text-lg" />
+      <MessageCircle className="text-blue-900 text-lg" />
       +971 52 203 2532
     </p>
 
     {/* EMAIL */}
-    <p className="text-white font-medium flex items-center gap-2">
-      <Mail className="text-white text-lg" />
+    <p className="text-blue-900 font-medium flex items-center gap-2">
+      <Mail className="text-blue-900 text-lg" />
       hodashineservices@gmail.com
     </p>
 
   </div>
             <div className="flex gap-4">
-              {[
-                { icon: Facebook, label: 'Facebook', href: 'https://www.facebook.com/share/1AddGk8yb1/' },
-                { icon: Instagram, label: 'Instagram', href: 'https://www.instagram.com/hodashineservices?igsh=MTl0Mm9rZzJxb3J0dg==' },
-                { icon: Music3, label: 'TikTok', href: 'https://www.tiktok.com/@www.tiktok.comhodashines?_r=1&_t=ZS-91R49SwReef' },
-              ].map((social, idx) => {
-                const Icon = social.icon
-                return (
-                  <a
-                    key={idx}
-                    href={social.href}
-                    className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-125 hover:-translate-y-1 shadow-lg"
-                    title={social.label}
-                    target="_blank"
-                  >
-                    <Icon size={22} />
-                  </a>
-                )
-              })}
-            </div>
+  {/* Facebook */}
+  <a
+    href="https://www.facebook.com/share/1AddGk8yb1/"
+    className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-125 hover:-translate-y-1 shadow-lg"
+    title="Facebook"
+    target="_blank"
+  >
+    <Facebook size={22} className="text-[#1877F2]" /> {/* Facebook Blue */}
+  </a>
+
+  {/* Instagram */}
+  <a
+    href="https://www.instagram.com/hodashineservices?igsh=MTl0Mm9rZzJxb3J0dg=="
+    className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-125 hover:-translate-y-1 shadow-lg"
+    title="Instagram"
+    target="_blank"
+  >
+    <Instagram size={22} className="text-pink-500" /> {/* Instagram Pink */}
+  </a>
+
+  {/* TikTok */}
+  <a
+    href="https://www.tiktok.com/@www.tiktok.comhodashines?_r=1&_t=ZS-91R49SwReef"
+    className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-125 hover:-translate-y-1 shadow-lg"
+    title="TikTok"
+    target="_blank"
+  >
+    <Music3 size={22} className="text-black" /> {/* TikTok Black */}
+  </a>
+</div>
+
           </div>
         </div>
 
         <div className="border-t border-white/20 py-8 mb-8" />
 
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-          <p className="text-white text-sm">&copy; 2025 HODA SHINE SERVICES. All rights reserved.</p>
+          <p className="text-blue-900 text-sm">&copy; 2025 HODA SHINE SERVICES. All rights reserved.</p>
 
           <button
             onClick={scrollToTop}

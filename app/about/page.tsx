@@ -1,188 +1,172 @@
-'use client'
+import About from "@/components/AboutPage";
 
-import Header from '@/components/header'
-import Footer from '@/components/footer'
-import { 
-  CheckCircle, Award, Users, Target, 
-  PhoneCall, MapPin, UserCheck, Sparkles
-} from 'lucide-react'
+export const metadata = {
+  title: "About Us | HODA SHINE SERVICES UAE",
+  description:
+    "Learn about HODA SHINE SERVICES – trusted cleaning company in Ajman, Sharjah & Dubai. Professional cleaners with 8+ years of experience and 5000+ satisfied clients.",
+  keywords: [
+    "HODA SHINE",
+  "HODA SHINE SERVICES",
+  "best cleaning service in Ajman UAE",
+  "cleaning services Ajman",
+  "cleaning services Dubai",
+  "cleaning services Sharjah",
+  "Ajman cleaners",
+  "home cleaning Ajman",
+  "office cleaning Ajman",
+  "deep cleaning Ajman",
+  "professional cleaners UAE",
+  "maid service Ajman",
+  "hourly cleaners Ajman",
+  "part-time maid Ajman",
+  "about hoda shine",
+  "cleaning company UAE",
+  "cleaners Ajman",
+  "cleaners Dubai",
+  "cleaners Sharjah",
+  "cleaning service UAE",
+  "best cleaning company Ajman"
+  ],
 
-export default function AboutPage() {
+  alternates: {
+    canonical: "https://hodashine.ae/about",
+  },
 
-  const values = [
-    { icon: Target, title: 'Our Mission', description: 'To provide exceptional cleaning services that enhance health and happiness in every home and workspace.' },
-    { icon: Award, title: 'Our Vision', description: 'To be the most trusted and recommended cleaning service provider across the UAE.' },
-    { icon: Users, title: 'Our Team', description: 'Professional, trained, and background-checked staff committed to excellence.' },
-    { icon: CheckCircle, title: 'Our Promise', description: '100% satisfaction guarantee on every job, every time.' }
-  ]
+  openGraph: {
+    title: "About HODA SHINE SERVICES UAE",
+    description:
+      "Professional cleaning company serving Ajman, Dubai and Sharjah with trained staff and premium-quality cleaning services.",
+    url: "https://hodashine.ae/about",
+    siteName: "HODA SHINE SERVICES",
+    type: "website",
+    images: [
+      {
+        url: "/pfc.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "Hoda Shine Cleaning Company UAE – About Us",
+      },
+    ],
+  },
 
-  const stats = [
-    { number: '8+', label: 'Years in Service' },
-    { number: '5,000+', label: 'Happy Clients' },
-    { number: '50+', label: 'Team Members' },
-    { number: '99.9%', label: 'Satisfaction Rate' }
-  ]
+  twitter: {
+    card: "summary_large_image",
+    title: "About HODA SHINE SERVICES UAE",
+    description:
+      "Learn about our cleaning company serving Ajman, Dubai & Sharjah with 8+ years of experience.",
+    images: ["/pfc.jpeg"],
+  },
 
+  other: {
+    "og:locale": "en_US",
+    "business:contact_data:street_address": "Free Zone Ajman — Block C1",
+    "business:contact_data:locality": "Ajman",
+    "business:contact_data:country_name": "United Arab Emirates",
+    "business:contact_data:phone_number": "+971569407167",
+    "business:contact_data:website": "https://hodashine.ae",
+
+    // Social Media
+    "sameAs:facebook": "https://www.facebook.com/share/1AddGk8yb1/",
+    "sameAs:instagram":
+      "https://www.instagram.com/hodashineservices?igsh=MTl0Mm9rZzJxb3J0dg==",
+    "sameAs:tiktok":
+      "https://www.tiktok.com/@www.tiktok.comhodashines?_r=1&_t=ZS-91R49SwReef",
+
+    // WhatsApp direct chat
+    "contactPoint:whatsapp": "https://wa.me/971522032532",
+  },
+};
+
+export default function Page() {
   return (
-    <main className="min-h-screen bg-white">
-      <Header />
+    <>
+      <About />
 
-      {/* HERO SECTION */}
-      <section className="py-20 px-6 md:px-12 bg-[#00FFFF] text-white">
-        <div className="max-w-7xl mx-auto">
-          <h1 className="text-5xl md:text-6xl font-black mb-4">About HODA SHINE</h1>
-          <p className="text-xl text-black max-w-3xl">
-            Dedicated to keeping your spaces clean, healthy, and beautiful since 2015
-          </p>
-        </div>
-      </section>
+      {/* ABOUT / ORGANIZATION SCHEMA */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            name: "HODA SHINE SERVICES",
+            url: "https://hodashine.ae",
+            logo: "https://hodashine.ae/pfc.jpeg",
+            description:
+              "HODA SHINE SERVICES is a professional cleaning company in Ajman offering premium home and office cleaning in Ajman, Dubai, and Sharjah.",
+            email: "hodashineservices@gmail.com",
+            telephone: "+971569407167",
+            sameAs: [
+              "https://www.facebook.com/share/1AddGk8yb1/",
+              "https://www.instagram.com/hodashineservices?igsh=MTl0Mm9rZzJxb3J0dg==",
+              "https://www.tiktok.com/@www.tiktok.comhodashines?_r=1&_t=ZS-91R49SwReef"
+            ],
+            address: {
+              "@type": "PostalAddress",
+              streetAddress: "Free Zone Ajman — Block C1",
+              addressLocality: "Ajman",
+              addressCountry: "AE"
+            },
+            foundingDate: "2016",
+            numberOfEmployees: "20",
+            aggregateRating: {
+              "@type": "AggregateRating",
+              ratingValue: "5",
+              reviewCount: "147"
+            }
+          }),
+        }}
+      />
 
-      {/* OUR STORY */}
-      <section className="py-20 px-6 md:px-12 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <img 
-                src="/professional-cleaning-company-office-team-working.jpg" 
-                alt="Our story"
-                className="rounded-2xl shadow-xl"
-              />
-            </div>
-            <div className="space-y-6">
-              <h2 className="text-4xl font-black text-gray-900">Our Story</h2>
-              <p className="text-lg text-gray-700 leading-relaxed">
-                HODA SHINE SERVICES was founded with a simple mission: to revolutionize the cleaning industry in the UAE.
-              </p>
-              <p className="text-lg text-gray-700 leading-relaxed">
-                Our commitment to quality, reliability, and customer satisfaction has made us the preferred choice across Dubai, Sharjah, and Ajman.
-              </p>
-              <p className="text-lg text-gray-700 leading-relaxed">
-                We ensure your spaces are not just clean, but healthy and welcoming.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CORE VALUES */}
-      <section className="py-20 px-6 md:px-12 bg-gray-50">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-black text-gray-900 mb-16">Our Core Values</h2>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {values.map((value, i) => {
-              const Icon = value.icon
-              return (
-                <div key={i} className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
-                  <Icon size={48} className="text-[#00FFFF] mb-4" />
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">{value.title}</h3>
-                  <p className="text-gray-700">{value.description}</p>
-                </div>
-              )
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* COMPANY STATS */}
-      <section className="py-20 px-6 md:px-12 bg-[#00FFFF] text-white">
-        <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6">
-          {stats.map((stat, i) => (
-            <div key={i}>
-              <p className="text-4xl md:text-5xl font-black text-white mb-2">{stat.number}</p>
-              <p className="text-lg font-semibold text-black">{stat.label}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* WHY CHOOSE US – UPDATED FULL LIST */}
-      <section className="py-20 px-6 md:px-12 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-black text-gray-900 mb-16">Why Choose Us</h2>
-
-          <div className="grid md:grid-cols-2 gap-8">
-
-            {[
-              'Expert House And Office Cleaning Services',
-              'Every Customer is Special',
-              'Affordable cleaning packages',
-              'We use 100% eco-seal certified cleaning products',
-              '100% guaranteed service on time',
-              'Qualified and trained professionals',
-              'Open 8AM - 8PM',
-              'Available 7 days a week'
-            ].map((reason, i) => (
-              <div key={i} className="flex gap-4 items-start">
-                <CheckCircle className="text-black flex-shrink-0 mt-1" size={24} />
-                <span className="text-lg text-gray-700">{reason}</span>
-              </div>
-            ))}
-
-          </div>
-        </div>
-      </section>
-
-      {/* OUR WORK EXPERIENCE */}
-      <section className="py-20 px-6 md:px-12 bg-gray-50">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-black text-gray-900 mb-4">Our Work Experience</h2>
-          <p className="text-xl text-[#00FFFF] font-semibold mb-12">
-            Find Standard Cleaning with Personal Touch
-          </p>
-
-          <div className="grid md:grid-cols-2 gap-6 text-lg text-gray-700">
-            {[
-              'Cleaning Services',
-              'Maids Services',
-              'Hourly, Daily, Weekly, Monthly Basis Services',
-              'Hourly Based Job - Minimum 3 Hours',
-            ].map((item, i) => (
-              <div key={i} className="flex items-start gap-3">
-                <Award className="text-black mt-1" size={26} />
-                {item}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* OUR WORKING PROCESS */}
-      <section className="py-20 px-6 md:px-12 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-black text-gray-900 mb-16">Our Working Process</h2>
-
-          <div className="grid md:grid-cols-4 gap-12">
-
-            <div className="flex flex-col items-center text-center">
-              <PhoneCall size={48} className="text-[#00FFFF] mb-4" />
-              <h3 className="text-xl font-bold mb-2">Call / Contact Us</h3>
-              <p className="text-gray-600">Reach out anytime for booking or inquiries.</p>
-            </div>
-
-            <div className="flex flex-col items-center text-center">
-              <MapPin size={48} className="text-[#00FFFF] mb-4" />
-              <h3 className="text-xl font-bold mb-2">Share Location & Time</h3>
-              <p className="text-gray-600">Provide your address and preferred schedule.</p>
-            </div>
-
-            <div className="flex flex-col items-center text-center">
-              <UserCheck size={48} className="text-[#00FFFF] mb-4" />
-              <h3 className="text-xl font-bold mb-2">Ready Cleaner</h3>
-              <p className="text-gray-600">Our trained cleaner prepares for the job.</p>
-            </div>
-
-            <div className="flex flex-col items-center text-center">
-              <Sparkles size={48} className="text-[#00FFFF] mb-4" />
-              <h3 className="text-xl font-bold mb-2">Start Cleaning</h3>
-              <p className="text-gray-600">We clean your home or office professionally.</p>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-      <Footer />
-    </main>
-  )
+      {/* LOCAL BUSINESS SCHEMA */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            name: "HODA SHINE SERVICES",
+            url: "https://hodashine.ae",
+            image: "https://hodashine.ae/pfc.jpeg",
+            priceRange: "AED 25 - AED 80",
+            telephone: "+971569407167",
+            email: "hodashineservices@gmail.com",
+            address: {
+              "@type": "PostalAddress",
+              streetAddress: "Free Zone Ajman — Block C1",
+              addressLocality: "Ajman",
+              addressCountry: "AE"
+            },
+            openingHoursSpecification: [
+              {
+                "@type": "OpeningHoursSpecification",
+                dayOfWeek: [
+                  "Monday",
+                  "Tuesday",
+                  "Wednesday",
+                  "Thursday",
+                  "Friday",
+                  "Saturday",
+                  "Sunday"
+                ],
+                opens: "08:00",
+                closes: "20:00"
+              }
+            ],
+            sameAs: [
+              "https://www.facebook.com/share/1AddGk8yb1/",
+              "https://www.instagram.com/hodashineservices?igsh=MTl0Mm9rZzJxb3J0dg==",
+              "https://www.tiktok.com/@www.tiktok.comhodashines?_r=1&_t=ZS-91R49SwReef",
+              "https://wa.me/971522032532"
+            ],
+            serviceArea: [
+              { "@type": "Place", name: "Ajman" },
+              { "@type": "Place", name: "Dubai" },
+              { "@type": "Place", name: "Sharjah" }
+            ]
+          }),
+        }}
+      />
+    </>
+  );
 }
