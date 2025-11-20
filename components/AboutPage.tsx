@@ -63,6 +63,26 @@ export default function About() {
         </div>
       </section>
 
+      {/* OFFICE GALLERY */}
+      <section className="py-20 px-6 md:px-12 bg-gray-50">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-4xl font-black text-gray-900 mb-10">Our Office & Team</h2>
+          <p className="text-lg text-gray-700 max-w-3xl mb-12">
+            A glimpse inside Hoda Shine Services — where our trained professionals, modern equipment, 
+            and clean working environment help us deliver the best cleaning services across UAE.
+          </p>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            <img src="/ofc1.jpeg" className="w-full h-64 object-cover rounded-xl shadow-lg" alt="Office 1" />
+            <img src="/ofc2.jpeg" className="w-full h-64 object-cover rounded-xl shadow-lg" alt="Office 2" />
+            <img src="/ofc3.jpeg" className="w-full h-64 object-cover rounded-xl shadow-lg" alt="Office 3" />
+            <img src="/ofc4.jpeg" className="w-full h-64 object-cover rounded-xl shadow-lg" alt="Office 4" />
+            <img src="/ofc5.jpeg" className="w-full h-64 object-cover rounded-xl shadow-lg" alt="Office 5" />
+            <img src="/ofc6.jpeg" className="w-full h-64 object-cover rounded-xl shadow-lg" alt="Office 6" />
+          </div>
+        </div>
+      </section>
+
       {/* CORE VALUES */}
       <section className="py-10 px-6 md:px-12 bg-gray-50">
         <div className="max-w-7xl mx-auto">
@@ -121,7 +141,7 @@ export default function About() {
       </section>
 
       {/* EXPERIENCE */}
-      <section className=" px-6 md:px-12 bg-gray-50">
+      <section className="px-6 md:px-12 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl font-black mb-4">Our Work Experience</h2>
           <p className="text-xl text-blue-900 font-semibold mb-12">
