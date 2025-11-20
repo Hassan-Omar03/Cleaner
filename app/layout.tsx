@@ -44,10 +44,10 @@ export const metadata: Metadata = {
       'Premium home & office cleaning services in Ajman, Dubai & Sharjah. Book professional cleaners today.',
     type: 'website',
     images: ['/hero-image.jpg'],
-    url: 'https://hodashine.ae'
+    url: 'https://hodashineservices.com'
   },
   generator: 'v0.app',
-  metadataBase: new URL('https://hodashine.ae')
+  metadataBase: new URL('https://hodashineservices.com')
 }
 
 export default function RootLayout({
@@ -59,7 +59,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head>
         {/* ---- CANONICAL URL ---- */}
-        <link rel="canonical" href="https://hodashine.ae" />
+        <link rel="canonical" href="https://hodashineservices.com" />
 
         {/* ---- ROBOTS ---- */}
         <meta name="robots" content="index, follow" />
@@ -114,7 +114,7 @@ export default function RootLayout({
               'HODA SHINE SERVICES provides professional home and office cleaning across Ajman, Dubai and Sharjah.',
             logo: '/logo.jpeg',
             image: '/hero-image.jpg',
-            url: 'https://hodashine.ae',
+            url: 'https://hodashineservices.com',
             telephone: '+971 56 940 7167',
             email: 'hodashineservices@gmail.com',
             priceRange: '$$',

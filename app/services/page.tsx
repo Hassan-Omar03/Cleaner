@@ -20,14 +20,14 @@ export const metadata = {
   ],
 
   alternates: {
-    canonical: "https://hodashine.ae/services",
+    canonical: "https://hodashineservices.com/services",
   },
 
   openGraph: {
     title: "HODA SHINE – Best Cleaning Services in UAE",
     description:
       "Trusted cleaning services including home, office, villa, carpet, sofa, and AC cleaning across Ajman, Sharjah, and Dubai.",
-    url: "https://hodashine.ae/services",
+    url: "https://hodashineservices.com/services",
     siteName: "HODA SHINE SERVICES",
     type: "website",
     images: [
@@ -82,7 +82,7 @@ export default function ServicesPage() {
             "@context": "https://schema.org",
             "@type": "Service",
             name: "Cleaning Services UAE – HODA SHINE SERVICES",
-            url: "https://hodashine.ae/services",
+            url: "https://hodashineservices.com/services",
             description:
               "Home, office, villa, deep cleaning, carpet cleaning, sofa cleaning, AC cleaning and swimming pool cleaning services in Ajman, Dubai, and Sharjah.",
             areaServed: ["Ajman", "Dubai", "Sharjah"],
@@ -123,8 +123,8 @@ export default function ServicesPage() {
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
             name: "HODA SHINE SERVICES",
-            image: "https://hodashine.ae/home1.jpg",
-            url: "https://hodashine.ae/services",
+            image: "https://hodashineservices.com/home1.jpg",
+            url: "https://hodashineservices.com/services",
             telephone: "+971569407167",
             email: "hodashineservices@gmail.com",
             priceRange: "AED 25 - AED 1000",

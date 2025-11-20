@@ -18,14 +18,14 @@ export const metadata = {
   ],
 
   alternates: {
-    canonical: "https://hodashine.ae/contact",
+    canonical: "https://hodashineservices.com/contact",
   },
 
   openGraph: {
     title: "Contact HODA SHINE SERVICES | UAE Cleaning Experts",
     description:
       "Get in touch with HODA SHINE for professional cleaning services across Ajman, Sharjah & Dubai.",
-    url: "https://hodashine.ae/contact",
+    url: "https://hodashineservices.com/contact",
     siteName: "HODA SHINE SERVICES",
     type: "website",
     images: [
@@ -80,7 +80,7 @@ export default function ContactPage() {
             "@context": "https://schema.org",
             "@type": "ContactPage",
             name: "Contact HODA SHINE SERVICES",
-            url: "https://hodashine.ae/contact",
+            url: "https://hodashineservices.com/contact",
             description:
               "Get in touch with HODA SHINE SERVICES for cleaning services in Ajman, Sharjah, Dubai.",
             contactPoint: {
@@ -102,8 +102,8 @@ export default function ContactPage() {
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
             name: "HODA SHINE SERVICES",
-            image: "https://hodashine.ae/home1.jpg",
-            url: "https://hodashine.ae/contact",
+            image: "https://hodashineservices.com/home1.jpg",
+            url: "https://hodashineservices.com/contact",
             telephone: "+971569407167",
             email: "hodashineservices@gmail.com",
             priceRange: "AED 25 - AED 1000",

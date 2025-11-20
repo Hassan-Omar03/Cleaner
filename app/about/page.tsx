@@ -29,14 +29,14 @@ export const metadata = {
   ],
 
   alternates: {
-    canonical: "https://hodashine.ae/about",
+    canonical: "https://hodashineservices.com/about",
   },
 
   openGraph: {
     title: "About HODA SHINE SERVICES UAE",
     description:
       "Professional cleaning company serving Ajman, Dubai and Sharjah with trained staff and premium-quality cleaning services.",
-    url: "https://hodashine.ae/about",
+    url: "https://hodashineservices.com/about",
     siteName: "HODA SHINE SERVICES",
     type: "website",
     images: [
@@ -63,7 +63,7 @@ export const metadata = {
     "business:contact_data:locality": "Ajman",
     "business:contact_data:country_name": "United Arab Emirates",
     "business:contact_data:phone_number": "+971569407167",
-    "business:contact_data:website": "https://hodashine.ae",
+    "business:contact_data:website": "https://hodashineservices.com",
 
     // Social Media
     "sameAs:facebook": "https://www.facebook.com/share/1AddGk8yb1/",
@@ -90,8 +90,8 @@ export default function Page() {
             "@context": "https://schema.org",
             "@type": "Organization",
             name: "HODA SHINE SERVICES",
-            url: "https://hodashine.ae",
-            logo: "https://hodashine.ae/pfc.jpeg",
+            url: "https://hodashineservices.com",
+            logo: "https://hodashineservices.com/pfc.jpeg",
             description:
               "HODA SHINE SERVICES is a professional cleaning company in Ajman offering premium home and office cleaning in Ajman, Dubai, and Sharjah.",
             email: "hodashineservices@gmail.com",
@@ -126,8 +126,8 @@ export default function Page() {
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
             name: "HODA SHINE SERVICES",
-            url: "https://hodashine.ae",
-            image: "https://hodashine.ae/pfc.jpeg",
+            url: "https://hodashineservices.com",
+            image: "https://hodashineservices.com/pfc.jpeg",
             priceRange: "AED 25 - AED 80",
             telephone: "+971569407167",
             email: "hodashineservices@gmail.com",
