@@ -1,11 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: "export",            // ✅ REQUIRED
   typescript: {
     ignoreBuildErrors: true,
   },
   images: {
-    unoptimized: true,
+    unoptimized: true,         // good
   },
-}
+};
 
-export default nextConfig
+export default nextConfig;
